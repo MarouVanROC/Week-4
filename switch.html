@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Systeem</title>
+</head>
+<body>
+    <h1>Login Systeem</h1>
+    
+    <form>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="button" onclick="login()">Login</button>
+    </form>
+    
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        switch (username) {
+            case 'admin':
+                if (password === 'password123') {
+                    alert('Welkom Administrator!');
+                } else {
+                    alert('Ongeldige gebruikersnaam of wachtwoord.');
+                }
+                break;
+            case 'user':
+                if (password === 'password') {
+                    alert('Login succesvol!');
+                } else {
+                    alert('Ongeldige gebruikersnaam of wachtwoord.');
+                }
+                break;
+            default:
+                alert('Ongeldige gebruikersnaam of wachtwoord.');
+                 case 'guest':
+                if (password === 'guest123') {
+                    alert('Login succesvol!');
+                } else {
+                    alert('Ongeldige gebruikersnaam of wachtwoord.');
+                }
+                break;
+        }
+        }
+
+    </script>
+</body>
+</html>
